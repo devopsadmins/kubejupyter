@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gc
+  annotations:
+    desc: "Namespace for GC app"
+    proj: "GerenciamentoCompleto"
+    owner: "Everton Lima"
+    phone: 12-99999-9999

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gc-dp
+  namespace: gc
+  labels:
+    app: gc-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gc-pods
+  template:
+    metadata:
+      labels:
+        app: gc-pods
+    spec:
+      containers:
+      - name: gc-container
+        image: backend:latest
